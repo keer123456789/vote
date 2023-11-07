@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>投票系统</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<h1>投票系统</h1>
+<div id="voting-app">
+    <h2>造型奖：</h2>
+    <ul id="zx">
+        <li>
+            <label for="zx1">1组:</label>
+            <input type="radio" id="zx1" name="vote" value="Option 1">
+        </li>
+        <li>
+            <label for="zx2">2组:</label>
+            <input type="radio" id="zx2" name="vote" value="Option 2">
+        </li>
+        <li>
+            <label for="zx3">3组:</label>
+            <input type="radio" id="zx3" name="vote" value="Option 1">
+        </li>
+        <li>
+            <label for="zx4">4组:</label>
+            <input type="radio" id="zx4" name="vote" value="Option 2">
+        </li>
+        <li>
+            <label for="zx5">5组:</label>
+            <input type="radio" id="zx5" name="vote" value="Option 1">
+        </li>
+        <!-- 添加更多选项 -->
+    </ul>
+    <h2>美观奖：</h2>
+    <ul id="mg">
+        <li>
+            <label for="mg1">1组:</label>
+            <input type="radio" id="mg1" name="vote" value="Option 1">
+        </li>
+        <li>
+            <label for="mg2">2组:</label>
+            <input type="radio" id="mg2" name="vote" value="Option 2">
+        </li>
+        <li>
+            <label for="mg3">3组:</label>
+            <input type="radio" id="mg3" name="vote" value="Option 1">
+        </li>
+        <li>
+            <label for="mg4">4组:</label>
+            <input type="radio" id="mg4" name="vote" value="Option 2">
+        </li>
+        <li>
+            <label for="mg5">5组:</label>
+            <input type="radio" id="mg5" name="vote" value="Option 1">
+        </li>
+        <!-- 添加更多选项 -->
+    </ul>
+    <h2>创新奖：</h2>
+    <ul id="cx">
+        <li>
+            <label for="cx1">1组:</label>
+            <input type="radio" id="cx1" name="vote" value="Option 1">
+        </li>
+        <li>
+            <label for="cx2">2组:</label>
+            <input type="radio" id="cx2" name="vote" value="Option 2">
+        </li>
+        <li>
+            <label for="cx3">3组:</label>
+            <input type="radio" id="cx3" name="vote" value="Option 1">
+        </li>
+        <li>
+            <label for="cx4">4组:</label>
+            <input type="radio" id="cx4" name="vote" value="Option 2">
+        </li>
+        <li>
+            <label for="cx5">5组:</label>
+            <input type="radio" id="cx5" name="vote" value="Option 1">
+        </li>
+        <!-- 添加更多选项 -->
+    </ul>
+    <h2>科技奖：</h2>
+    <ul id="kj">
+        <li>
+            <label for="kj1">1组:</label>
+            <input type="radio" id="kj1" name="vote" value="Option 1">
+        </li>
+        <li>
+            <label for="kj2">2组:</label>
+            <input type="radio" id="kj2" name="vote" value="Option 2">
+        </li>
+        <li>
+            <label for="kj3">3组:</label>
+            <input type="radio" id="kj3" name="vote" value="Option 1">
+        </li>
+        <li>
+            <label for="kj4">4组:</label>
+            <input type="radio" id="kj4" name="vote" value="Option 2">
+        </li>
+        <li>
+            <label for="kj5">5组:</label>
+            <input type="radio" id="kj5" name="vote" value="Option 1">
+        </li>
+        <!-- 添加更多选项 -->
+    </ul>
+    <h2>团结奖：</h2>
+    <ul id="tj">
+        <li>
+            <label for="tj1">1组:</label>
+            <input type="radio" id="tj1" name="vote" value="Option 1">
+        </li>
+        <li>
+            <label for="tj2">2组:</label>
+            <input type="radio" id="tj2" name="vote" value="Option 2">
+        </li>
+        <li>
+            <label for="tj3">3组:</label>
+            <input type="radio" id="tj3" name="vote" value="Option 1">
+        </li>
+        <li>
+            <label for="tj4">4组:</label>
+            <input type="radio" id="tj4" name="vote" value="Option 2">
+        </li>
+        <li>
+            <label for="tj5">5组:</label>
+            <input type="radio" id="tj5" name="vote" value="Option 1">
+        </li>
+        <!-- 添加更多选项 -->
+    </ul>
+
+    <button onclick="vote()">投票</button>
+
+    <div id="result">
+        <h2>投票结果：</h2>
+        <p id="option1-result">选项 1: <span id="option1-votes">0</span> 票</p>
+        <p id="option2-result">选项 2: <span id="option2-votes">0</span> 票</p>
+        <p id="option3-result">选项 3: <span id="option3-votes">0</span> 票</p>
+        <p id="option4-result">选项 4: <span id="option4-votes">0</span> 票</p>
+        <p id="option5-result">选项 5: <span id="option5-votes">0</span> 票</p>
+        <!-- 添加更多选项的结果 -->
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
