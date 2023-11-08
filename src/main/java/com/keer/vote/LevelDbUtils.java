@@ -16,20 +16,24 @@ import java.util.Map;
 
 
 public class LevelDbUtils {
-    private DB db = null;
-    private String dbFolder = "leveldb_demo/db/test.db";
-    private String charset = "utf-8";
+    private static DB db = null;
+    private static String dbFolder = "leveldb/db/vote.db";
+    private static String charset = "utf-8";
+
+    static {
+        initLevelDB();
+    }
 
     /**
      * 初始化LevelDB
      * 每次使用levelDB前都要调用此方法，无论db是否存在
      */
-    public void initLevelDB() {
+    private static void initLevelDB() {
         DBFactory factory = new Iq80DBFactory();
         Options options = new Options();
         options.createIfMissing(true);
         try {
-            this.db = factory.open(new File(dbFolder), options);
+            db = factory.open(new File(dbFolder), options);
         } catch (IOException e) {
             System.out.println("levelDB启动异常");
             e.printStackTrace();
@@ -42,7 +46,7 @@ public class LevelDbUtils {
      * @param obj
      * @return
      */
-    private byte[] serializer(Object obj) {
+    private static byte[] serializer(Object obj) {
         byte[] jsonBytes = JSON.toJSONBytes(obj);
         return jsonBytes;
 
@@ -54,7 +58,7 @@ public class LevelDbUtils {
      * @param bytes
      * @return
      */
-    private Object deserializer(byte[] bytes) {
+    private static Object deserializer(byte[] bytes) {
         String str = new String(bytes);
         return JSON.parse(str);
     }
@@ -65,9 +69,9 @@ public class LevelDbUtils {
      * @param key
      * @param val
      */
-    public void put(String key, Object val) {
+    public static void put(String key, Object val) {
         try {
-            this.db.put(key.getBytes(charset), this.serializer(val));
+            db.put(key.getBytes(charset), serializer(val));
         } catch (UnsupportedEncodingException e) {
             System.out.println("编码转化异常");
             e.printStackTrace();
@@ -80,7 +84,7 @@ public class LevelDbUtils {
      * @param key
      * @return
      */
-    public Object get(String key) {
+    public static Object get(String key) {
         byte[] val = null;
         try {
             val = db.get(key.getBytes(charset));
@@ -100,7 +104,7 @@ public class LevelDbUtils {
      *
      * @param key
      */
-    public void delete(String key) {
+    public static void delete(String key) {
         try {
             db.delete(key.getBytes(charset));
         } catch (Exception e) {
@@ -114,7 +118,7 @@ public class LevelDbUtils {
      * 关闭数据库连接
      * 每次只要调用了initDB方法，就要在最后调用此方法
      */
-    public void closeDB() {
+    public static void closeDB() {
         if (db != null) {
             try {
                 db.close();
@@ -130,7 +134,7 @@ public class LevelDbUtils {
      *
      * @return
      */
-    public List<String> getKeys() {
+    public static List<String> getKeys() {
 
         List<String> list = new ArrayList<>();
         DBIterator iterator = null;

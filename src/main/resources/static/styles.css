@@ -27,7 +27,7 @@
     }
 
     #result {
-        /*display: none;*/
+        display: none;
     }
 
     #result p {
@@ -64,10 +64,42 @@
     }
 
     #result {
-        /*display: none;*/
+        display: none;
     }
 
     #result p {
         margin: 5px 0;
     }
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#voting-app {
+    margin: 20px auto;
+    width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#options li {
+    margin: 10px 0;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+}
+
+#result {
+    display: none;
+}
+
+#result p {
+    margin: 5px 0;
 }
