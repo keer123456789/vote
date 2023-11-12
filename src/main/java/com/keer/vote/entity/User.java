@@ -1,4 +1,4 @@
-package com.keer.vote;
+package com.keer.vote.entity;
 
 /**
  * @Author: 张经伦

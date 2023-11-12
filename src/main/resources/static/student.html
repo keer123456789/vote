@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王老师投票系统</title>
+    <link rel="stylesheet" href="css/student.css">
+    <!-- CSS -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+<div class="voting-container">
+    <h2>王老师投票系统</h2>
+    <div class="voting-app">
+        <button type="button" onclick="location.reload()" class="btn btn-info">刷新</button>
+        <button type="button" onclick="window.location.href='/index.html'" class="btn btn-info">退出</button>
+    </div>
+    <div class="voting-app">
+        <div>
+            <h4 class="vote-header">造型奖：</h4>
+            <ul class="vote-body">
+                <li>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="zx1" name="voteZx" class="custom-control-input" value="group1">
+                        <label class="custom-control-label" style="font-size: 17px" for="zx1">1组</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="zx2" name="voteZx" class="custom-control-input" value="group2">
+                        <label class="custom-control-label" style="font-size: 17px" for="zx2">2组</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="zx3" name="voteZx" class="custom-control-input" value="group3">
+                        <label class="custom-control-label" style="font-size: 17px" for="zx3">3组</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="zx4" name="voteZx" class="custom-control-input" value="group4">
+                        <label class="custom-control-label" style="font-size: 17px" for="zx4">4组</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="zx5" name="voteZx" class="custom-control-input" value="group5">
+                        <label class="custom-control-label" style="font-size: 17px" for="zx5">5组</label>
+                    </div>
+                </li>
+                <!-- 添加更多选项 -->
+            </ul>
+        </div>
+        <div>
+            <h4 class="vote-header">美观奖：</h4>
+            <ul class="vote-body">
+                <li>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="mg1" name="voteMg" class="custom-control-input" value="group1">
+                        <label class="custom-control-label" style="font-size: 17px" for="mg1">1组</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="mg2" name="voteMg" class="custom-control-input" value="group2">
+                        <label class="custom-control-label" style="font-size: 17px" for="mg2">2组</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="mg3" name="voteMg" class="custom-control-input" value="group3">
+                        <label class="custom-control-label" style="font-size: 17px" for="mg3">3组</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="mg4" name="voteMg" class="custom-control-input" value="group4">
+                        <label class="custom-control-label" style="font-size: 17px" for="mg4">4组</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="mg5" name="voteMg" class="custom-control-input" value="group5">
+                        <label class="custom-control-label" style="font-size: 17px" for="mg5">5组</label>
+                    </div>
+                </li>
+                <!-- 添加更多选项 -->
+            </ul>
+        </div>
+        <div>
+            <h4 class="vote-header">创新奖：</h4>
+            <ul class="vote-body">
+                <li>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="cx1" name="voteCx" class="custom-control-input" value="group1">
+                        <label class="custom-control-label" style="font-size: 17px" for="cx1">1组</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="cx2" name="voteCx" class="custom-control-input" value="group2">
+                        <label class="custom-control-label" style="font-size: 17px" for="cx2">2组</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="cx3" name="voteCx" class="custom-control-input" value="group3">
+                        <label class="custom-control-label" style="font-size: 17px" for="cx3">3组</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="cx4" name="voteCx" class="custom-control-input" value="group4">
+                        <label class="custom-control-label" style="font-size: 17px" for="cx4">4组</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="cx5" name="voteCx" class="custom-control-input" value="group5">
+                        <label class="custom-control-label" style="font-size: 17px" for="cx5">5组</label>
+                    </div>
+                </li>
+                <!-- 添加更多选项 -->
+            </ul>
+        </div>
+        <div>
+            <h4 class="vote-header">科技奖：</h4>
+            <ul class="vote-body">
+                <li>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="kj1" name="voteKj" class="custom-control-input" value="group1">
+                        <label class="custom-control-label" style="font-size: 17px" for="kj1">1组</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="kj2" name="voteKj" class="custom-control-input" value="group2">
+                        <label class="custom-control-label" style="font-size: 17px" for="kj2">2组</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="kj3" name="voteKj" class="custom-control-input" value="group3">
+                        <label class="custom-control-label" style="font-size: 17px" for="kj3">3组</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="kj4" name="voteKj" class="custom-control-input" value="group4">
+                        <label class="custom-control-label" style="font-size: 17px" for="kj4">4组</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="kj5" name="voteKj" class="custom-control-input" value="group5">
+                        <label class="custom-control-label" style="font-size: 17px" for="kj5">5组</label>
+                    </div>
+                </li>
+                <!-- 添加更多选项 -->
+            </ul>
+        </div>
+        <div>
+            <h4 class="vote-header">团结奖：</h4>
+            <ul class="vote-body">
+                <li>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="tj1" name="voteTj" class="custom-control-input" value="group1">
+                        <label class="custom-control-label" style="font-size: 17px" for="tj1">1组</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="tj2" name="voteTj" class="custom-control-input" value="group2">
+                        <label class="custom-control-label" style="font-size: 17px" for="tj2">2组</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="tj3" name="voteTj" class="custom-control-input" value="group3">
+                        <label class="custom-control-label" style="font-size: 17px" for="tj3">3组</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="tj4" name="voteTj" class="custom-control-input" value="group4">
+                        <label class="custom-control-label" style="font-size: 17px" for="tj4">4组</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="tj5" name="voteTj" class="custom-control-input" value="group5">
+                        <label class="custom-control-label" style="font-size: 17px" for="tj5">5组</label>
+                    </div>
+                </li>
+                <!-- 添加更多选项 -->
+            </ul>
+        </div>
+        <button type="button" id="btn-vote" onclick="vote()" class="btn btn-success">投票</button>
+        <button type="button" id="btn-result" onclick="getResult()" class="btn btn-primary">查看投票结果</button>
+    </div>
+    <div class="voting-app" id="result-vote" style="display: none">
+        <h4 class="vote-result-header">投票结果</h4>
+        <h6 class="vote-result-item">造型奖：<i id="res-zx"></i></h6>
+        <h6 class="vote-result-item">美观奖：<i id="res-mg"></i></h6>
+        <h6 class="vote-result-item">创新奖：<i id="res-cx"></i></h6>
+        <h6 class="vote-result-item">科技奖：<i id="res-kj"></i></h6>
+        <h6 class="vote-result-item">团结奖：<i id="res-tj"></i></h6>
+    </div>
+</div>
+<script src="js/base63.js"></script>
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/student.js"></script>
+</body>
+</html>

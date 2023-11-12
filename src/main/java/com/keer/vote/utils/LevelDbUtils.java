@@ -1,6 +1,7 @@
-package com.keer.vote;
+package com.keer.vote.utils;
 
 import com.alibaba.fastjson2.JSON;
+import com.alibaba.fastjson2.JSONObject;
 import org.iq80.leveldb.DB;
 import org.iq80.leveldb.DBFactory;
 import org.iq80.leveldb.DBIterator;
@@ -58,9 +59,9 @@ public class LevelDbUtils {
      * @param bytes
      * @return
      */
-    private static Object deserializer(byte[] bytes) {
+    private static <T> T deserializer(byte[] bytes, Class<T> clazz) {
         String str = new String(bytes);
-        return JSON.parse(str);
+        return JSONObject.parseObject(str, clazz);
     }
 
     /**
@@ -84,7 +85,7 @@ public class LevelDbUtils {
      * @param key
      * @return
      */
-    public static Object get(String key) {
+    public static <T> T get(String key, Class<T> clazz) {
         byte[] val = null;
         try {
             val = db.get(key.getBytes(charset));
@@ -96,7 +97,7 @@ public class LevelDbUtils {
         if (val == null) {
             return null;
         }
-        return deserializer(val);
+        return deserializer(val, clazz);
     }
 
     /**

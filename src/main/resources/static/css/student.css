@@ -1,0 +1,100 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.voting-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.voting-app {
+    margin-top: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+#result h2 {
+    color: #555;
+}
+
+#result p {
+    margin: 10px 0;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* 使用 flexbox 布局 */
+}
+
+li {
+    margin-right: 10px; /* 为选项之间添加一些间距 */
+}
+
+.vote-header {
+    color: #555;
+    text-align: left;
+}
+
+.vote-result-header {
+    color: #555;
+    text-align: center;
+}
+.vote-result-item{
+    color: #070000;
+    text-align: left;
+}
+.vote-body {
+
+}
